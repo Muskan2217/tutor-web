@@ -1,0 +1,267 @@
+#hamburger {
+  width: 100%;
+  border-bottom: none;
+  // display: none;
+  padding: 0;
+  margin: 0;
+  a {
+    color: #000;
+  }
+  a:hover {
+    color: $green;
+  }
+  .side_menu {
+    position: absolute;
+
+    top: 0;
+    right: -1500px;
+    width: 100%;
+    // min-height: 700px;
+    height: 700px;
+    position: fixed;
+    padding: 5%;
+    transition: 0.5s;
+    background-color: $white;
+    border-top: 50px solid $green;
+    overflow-y: auto;
+    z-index: 1000;
+    .fa {
+      float: right;
+    }
+    .main_ul {
+      li {
+        margin: 0;
+        padding-bottom: 2rem;
+      }
+      .dropdown {
+        display: none;
+
+        li {
+          margin: 0;
+          margin-left: 3rem;
+          padding: 0.5rem 0 0;
+          list-style: disc;
+          color: $black;
+        }
+      }
+
+      .submenu {
+        display: none;
+      }
+
+      .sub_submenu {
+        display: none;
+      }
+
+      .megamenu_dropdown {
+        margin-left: 2rem;
+        display: none;
+
+        h2 {
+          padding-top: 1rem;
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: $black;
+        }
+      }
+    }
+    // -------------------------------------
+    .hover_me:hover {
+      .rotate {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    // submenu hover ----------------------------------
+
+    #Course_Catalog:hover {
+      .submenu_catalog {
+        display: block;
+      }
+      .turn {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #gallary:hover {
+      .submenu_gallery {
+        display: block;
+      }
+      .turn {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #Contact:hover {
+      .submenu_contact {
+        display: block;
+      }
+
+      .turn {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #shop:hover {
+      .submenu_shop {
+        display: block;
+      }
+
+      .turn {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #sortcodes:hover {
+      .submenu_sortcodes {
+        display: block;
+      }
+
+      .turn {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #widgetd:hover {
+      .submenu_widgetd {
+        display: block;
+      }
+      .turn {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #event:hover {
+      .submenu_event {
+        display: block;
+      }
+
+      .turn {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+    #team:hover {
+      .submenu_team {
+        display: block;
+      }
+
+      .turn {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    // sub_submenu hover effect------------------------------------------
+
+    // galary sub_submenu hover
+    #image_Only:hover {
+      .Image_Only {
+        display: block;
+      }
+      .fa-caret-right {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #Image_With_Title:hover {
+      .Image_With_Title {
+        display: block;
+      }
+      .fa-caret-right {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #Image_With_Excerpt:hover {
+      .Image_With_Excerpt {
+        display: block;
+      }
+      .fa-caret-right {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+    // galary sub_submenu hover ends
+    #post:hover {
+      .post {
+        display: block;
+      }
+
+      .fa-caret-right {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    #video_post:hover {
+      .video_post {
+        display: block;
+      }
+      .fa-caret-right {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+
+    // shop sub_submenu hover
+    #account_details:hover {
+      .account_details {
+        display: block;
+      }
+      .fa-caret-right {
+        transform: rotate(90deg);
+        color: $green;
+      }
+    }
+  }
+
+  // ========hamburger icon=====================================
+
+  .path1,
+  .path2 {
+    stroke-dasharray: 104;
+    stroke-dashoffset: -71;
+    transition: 1s all ease;
+  }
+  .cross {
+    stroke-dashoffset: 68;
+  }
+  .mline {
+    stroke-dasharray: 41;
+    stroke-dashoffset: -82;
+    transition: 1s all ease;
+  }
+  .hide {
+    stroke-dasharray: 43;
+    stroke-dashoffset: 130;
+  }
+  .svgburg {
+    position: fixed;
+    right: 5%;
+    top: 70px;
+    z-index: 1;
+    transition: 0.3s;
+    background-color: $green;
+    display: none;
+  }
+
+  .rightzero {
+    right: 0;
+  }
+
+  .movetop {
+    top: 0;
+  }
+
+  /*reduce height and wihth of svg for resizing*/
+}

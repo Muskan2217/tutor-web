@@ -1,0 +1,206 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  transition: 1s;
+  background-color: rgba(11, 11, 14, 0.7);
+}
+
+/* Modal Content */
+.modal_inner {
+  width: 450px;
+  margin: 100px auto;
+  position: relative;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.7s;
+  animation-name: animatetop;
+  animation-duration: 0.7s;
+
+  .close,
+  .close_second {
+    color: $green;
+    font-size: 58px;
+    font-weight: 300;
+    display: flex;
+    // justify-content: flex-end;
+    transition: all 0.3s ease-in-out 0s;
+    position: absolute;
+
+    top: -60px;
+    left: 100%;
+  }
+
+  .close:hover,
+  .close_second:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+  }
+
+  .btn_box {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+
+    .btn {
+      flex: 1;
+      border-radius: 0;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .btn_white {
+      background: #fff;
+      border-bottom: 0.1px solid rgba(128, 128, 128, 0.515);
+      color: $grey;
+    }
+
+    .btn:hover {
+      border: none;
+      background: $lightgreen;
+      color: $white;
+    }
+
+    .btn_white:hover {
+      background: #fff;
+      color: $grey;
+      border-bottom: 0.1px solid rgba(128, 128, 128, 0.515);
+    }
+  }
+
+  /* The Close Button */
+  .modal-content {
+    text-align: center;
+    background-color: #f1fff7;
+    border-radius: 0 0 5px 5px;
+    padding: 0 3rem 2rem;
+    padding-bottom: 2rem;
+
+    margin: auto;
+    width: 100%;
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
+      0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+
+    h1 {
+      padding: 1.5rem 0 1rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: grey;
+      font-weight: 400;
+    }
+
+    form {
+      width: 100%;
+      margin: 0 auto;
+      input {
+        width: 100%;
+        padding: 1rem 0.5rem;
+        margin: 0.2rem;
+        border: none;
+        border: 0.1px solid rgba(128, 128, 128, 0.515);
+        border-radius: 5px;
+      }
+
+      input,
+      select {
+        color: $black;
+      }
+    }
+
+    .links {
+      margin: 1rem 0;
+      .fa {
+        font-size: 1.1rem;
+        margin: 8px;
+      }
+    }
+
+    .checkbox {
+      text-align: left;
+
+      p {
+        padding-top: 0;
+      }
+      input {
+        margin-right: 1rem;
+      }
+
+      input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      color: grey;
+    }
+    a:hover {
+      color: $green;
+    }
+    .btn {
+      width: 190px;
+    }
+    .close:hover,
+    .close:focus {
+      cursor: pointer;
+    }
+  }
+}
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animateBottom {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes animateBottom {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 300px;
+    opacity: 0;
+  }
+}
